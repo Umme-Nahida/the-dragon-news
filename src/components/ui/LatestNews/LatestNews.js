@@ -30,8 +30,9 @@ const LatestNews = () => {
     </Card>
 
     <Grid className='mt-5' container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+  
     <Grid item xs={6}>
-    <Card>
+      <Card> 
       <CardActionArea>
       <CardMedia>
         <Image src={topNews2} width={800} alt='top-news'/>
@@ -51,7 +52,76 @@ const LatestNews = () => {
           </Typography>
         </CardContent>
       </CardActionArea>
-    </Card>
+      </Card>
+    </Grid>
+    <Grid item xs={6}>
+      <Card> 
+      <CardActionArea>
+      <CardMedia>
+        <Image src={topNews2} width={800} alt='top-news'/>
+      </CardMedia>
+        <CardContent>
+            <p className='text-white bg-red-500 rounded px-2 w-[100px] my-5'>
+                Technology
+            </p>
+          <Typography gutterBottom  component="div">
+          Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet
+          </Typography>
+          <Typography gutterBottom>
+          By developer Nahida - May 31 2024
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+          Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine.....
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      </Card>
+    </Grid>
+    <Grid item xs={6}>
+      <Card> 
+      <CardActionArea>
+      <CardMedia>
+        <Image src={topNews2} width={800} alt='top-news'/>
+      </CardMedia>
+        <CardContent>
+            <p className='text-white bg-red-500 rounded px-2 w-[100px] my-5'>
+                Technology
+            </p>
+          <Typography gutterBottom  component="div">
+          Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet
+          </Typography>
+          <Typography gutterBottom>
+          By developer Nahida - May 31 2024
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+          Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine.....
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      </Card>
+    </Grid>
+    <Grid item xs={6}>
+      <Card> 
+      <CardActionArea>
+      <CardMedia>
+        <Image src={topNews2} width={800} alt='top-news'/>
+      </CardMedia>
+        <CardContent>
+            <p className='text-white bg-red-500 rounded px-2 w-[100px] my-5'>
+                Technology
+            </p>
+          <Typography gutterBottom  component="div">
+          Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet
+          </Typography>
+          <Typography gutterBottom>
+          By developer Nahida - May 31 2024
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+          Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine.....
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      </Card>
     </Grid>
   
    </Grid>
