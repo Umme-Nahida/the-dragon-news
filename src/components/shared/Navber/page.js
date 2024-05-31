@@ -18,11 +18,11 @@ import Header from '../Header';
 
 const pages = [
     {
-  route:"home",
+  route:"Home",
   pathName:"/",
 },
     {
-  route:"pages",
+  route:"Pages",
   pathName:"/pages",
 },
     {
