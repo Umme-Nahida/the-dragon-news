@@ -62,7 +62,7 @@ const Footer = () => {
             ))}
           </Box>
           <Typography variant='body2' color="gray">
-            @2023 the dragon news design by Developer Nahida
+            @2023 The Dragon News Design by Developer Nahida
           </Typography>
           ;
         </div>
