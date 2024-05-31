@@ -13,11 +13,11 @@ const Header = () => {
               <Image src={header} width={500} height={500} alt='header logo' className='mx-auto' />
             </Container>
             <Typography variant='body2' color="gray" className='my-3'>
-            @2023 the dragon news design by Developer Nahida
-          </Typography>
+               @2023 the dragon news design 
+            </Typography>
             <Typography >
-            {currentDate}
-          </Typography>
+              {currentDate}
+            </Typography>
 
         </Box>
     );
