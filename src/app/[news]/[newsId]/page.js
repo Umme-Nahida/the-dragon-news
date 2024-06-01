@@ -1,6 +1,9 @@
+import { getDetailsNews } from '@/utils/getDetailsNews';
 import React from 'react';
 
-const NewsDetailsPage = ({params}) => {
+const NewsDetailsPage = async({params}) => {
+    const {data} = await getDetailsNews(params.newsId)
+    console.log(data)
     return (
         <div>
             details id {params.newsId}
