@@ -27,7 +27,7 @@ const pages = [
 },
     {
   route:"Categories",
-  pathName:"/categories",
+  pathName:"/categories/news?category=all-news",
 },
     {
   route:"Contact",

@@ -1,7 +1,10 @@
-import { Box, Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
+import { Box, ButtonBase, Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 import siderImage from '@/asset/side-top-news.png'
+import {data} from "@/API/data";
+import sideBottomImg from '@/asset/side-bottom-img.png'
+import defaultImg from '@/asset/blankImage.png'
 
 const Sidebar = () => {
     return (
@@ -28,7 +31,28 @@ const Sidebar = () => {
         </CardContent>
       </CardActionArea>
       </Card>
-        </Box>
+          
+          {data.map((item)=>(
+             <Grid key={item.id} container spacing={2}>
+             <Grid item xs={6} md={4}>
+                  <Image src={defaultImg} className='mt-5' width={500} height={300} alt='complex'/>
+             </Grid>
+             <Grid item xs={6} md={8}>
+                <Typography
+                   gutterBottom  component="div">
+                  {item.title}
+                </Typography>
+                <Typography
+                   gutterBottom  component="div">
+                  {item.date}
+                </Typography>
+             </Grid>
+            
+           </Grid>
+          ))}
+       
+       <Image src={sideBottomImg} className='mt-5' width={500} height={300} alt='complex'/>
+      </Box>
     );
 };
 
