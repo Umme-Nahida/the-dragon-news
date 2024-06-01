@@ -1,4 +1,4 @@
-import { Box, ButtonBase, Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+import { Box, ButtonBase, Card, CardActionArea, CardContent, CardMedia, Divider, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 import siderImage from '@/asset/side-top-news.png'
@@ -37,7 +37,7 @@ const Sidebar = () => {
              <Grid item xs={6} md={4}>
                   <Image src={defaultImg} className='mt-5' width={500} height={300} alt='complex'/>
              </Grid>
-             <Grid item xs={6} md={8}>
+             <Grid className='mt-5 mb-2' item xs={6} md={8}>
                 <Typography
                    gutterBottom  component="div">
                   {item.title}
@@ -47,6 +47,7 @@ const Sidebar = () => {
                   {item.date}
                 </Typography>
              </Grid>
+              <Divider/>
             
            </Grid>
           ))}
