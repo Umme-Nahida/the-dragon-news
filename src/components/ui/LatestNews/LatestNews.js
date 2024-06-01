@@ -3,126 +3,63 @@ import React from 'react';
 import topNews from "@/asset/top-news.png"
 import topNews2 from "@/asset/top-news2.png"
 import Image from 'next/image';
+import { getAllNewsData } from '@/utils/getAllNewsData';
 
-const LatestNews = () => {
+const LatestNews = async() => {
+  const {data} = await getAllNewsData();
+  console.log(data[0])
     return (
         <Box >
              <Card>
       <CardActionArea>
       <CardMedia>
-        <Image src={topNews} width={800} alt='top-news'/>
+        <Image src={data[0].thumbnail_url} width={800} height={500} alt='top-news'/>
       </CardMedia>
         <CardContent>
             <p className='text-white bg-red-500 rounded px-2 w-[100px] my-5'>
-                Technology
+                {data[0].category}
             </p>
-          <Typography gutterBottom variant="h5" component="div">
-          Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet
-          </Typography>
-          <Typography gutterBottom>
-          By developer Nahida - May 31 2024
-          </Typography>
+            <Typography gutterBottom variant='h4' component="div">
+                    {data[0].title > 30 ? data[0].title.slice(0,30) + "..." : data[0].title }
+            </Typography>
+            <Typography gutterBottom>
+                    By {data[0].author.name} - {data[0].author.published_date}
+            </Typography>
           <Typography variant="body2" color="text.secondary">
-          Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) – U.S. President Joe Biden has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence day six months after Russia invaded the country.'The United States of America is committed to supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of that commitment, I am proud to announce our biggest tranche of security assistance to date: approximately $2. Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) U.S. President Joe Biden has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence day six months after Russia invaded the country.'The United States of America is committed to supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of that commitment, I am proud to announce our biggest tranche of security assistance to date: approximately $2
-          </Typography>
+                     {data[0].details.length > 150 ? data[0].details.slice(0,260) + "....." : data[0].details}
+           </Typography>
         </CardContent>
       </CardActionArea>
     </Card>
 
     <Grid className='mt-5' container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
   
-    <Grid item xs={6}>
+    {data.slice(0,4).map(news=>(
+      <Grid key={news._id} item xs={6}>
       <Card> 
       <CardActionArea>
       <CardMedia>
-        <Image src={topNews2} width={800} alt='top-news'/>
+        <Image src={news.thumbnail_url} width={800} height={600} alt='top-news'/>
       </CardMedia>
         <CardContent>
             <p className='text-white bg-red-500 rounded px-2 w-[100px] my-5'>
-                Technology
+                {news.category}
             </p>
-          <Typography gutterBottom  component="div">
-          Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet
+          <Typography gutterBottom variant='h6' component="div">
+            {news.title}
           </Typography>
           <Typography gutterBottom>
-          By developer Nahida - May 31 2024
+          By {news.author.name} - {news.author.published_date}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-          Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine.....
+          {news.details.length > 150 ? news.details.slice(0,120) + "....." : news.details}
           </Typography>
         </CardContent>
       </CardActionArea>
       </Card>
     </Grid>
-    <Grid item xs={6}>
-      <Card> 
-      <CardActionArea>
-      <CardMedia>
-        <Image src={topNews2} width={800} alt='top-news'/>
-      </CardMedia>
-        <CardContent>
-            <p className='text-white bg-red-500 rounded px-2 w-[100px] my-5'>
-                Technology
-            </p>
-          <Typography gutterBottom  component="div">
-          Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet
-          </Typography>
-          <Typography gutterBottom>
-          By developer Nahida - May 31 2024
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-          Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine.....
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      </Card>
-    </Grid>
-    <Grid item xs={6}>
-      <Card> 
-      <CardActionArea>
-      <CardMedia>
-        <Image src={topNews2} width={800} alt='top-news'/>
-      </CardMedia>
-        <CardContent>
-            <p className='text-white bg-red-500 rounded px-2 w-[100px] my-5'>
-                Technology
-            </p>
-          <Typography gutterBottom  component="div">
-          Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet
-          </Typography>
-          <Typography gutterBottom>
-          By developer Nahida - May 31 2024
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-          Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine.....
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      </Card>
-    </Grid>
-    <Grid item xs={6}>
-      <Card> 
-      <CardActionArea>
-      <CardMedia>
-        <Image src={topNews2} width={800} alt='top-news'/>
-      </CardMedia>
-        <CardContent>
-            <p className='text-white bg-red-500 rounded px-2 w-[100px] my-5'>
-                Technology
-            </p>
-          <Typography gutterBottom  component="div">
-          Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet
-          </Typography>
-          <Typography gutterBottom>
-          By developer Nahida - May 31 2024
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-          Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine.....
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      </Card>
-    </Grid>
+    ))}
+    
   
    </Grid>
     </Box>

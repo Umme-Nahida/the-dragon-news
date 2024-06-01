@@ -35,7 +35,7 @@ const Sidebar = () => {
           {data.map((item)=>(
              <Grid key={item.id} container spacing={2}>
              <Grid item xs={6} md={4}>
-                  <Image src={defaultImg} className='mt-5' width={500} height={300} alt='complex'/>
+                  <Image src={item.image} className='mt-5 rounded' width={500} height={300} alt='complex'/>
              </Grid>
              <Grid className='mt-5 mb-2' item xs={6} md={8}>
                 <Typography

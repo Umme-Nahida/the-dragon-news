@@ -6,7 +6,7 @@ import React from 'react';
 const NewsDetailsPage = async({params}) => {
     const {data} = await getDetailsNews(params.newsId)
     return (
-        <Box className="20">
+        <Box className="mt-10 mb-40">
             <Container>
             <Grid container spacing={2}>
                   <Grid item xs={6}>
