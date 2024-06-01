@@ -6,7 +6,7 @@ const NewsDetailsPage = async({params}) => {
     console.log(data)
     return (
         <div>
-            details id {params.newsId}
+           {params.newsId}
         </div>
     );
 };
