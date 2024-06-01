@@ -22,7 +22,7 @@ const NewsDetailsPage = async({params}) => {
                     </Grid>
                   </Grid>
                   <Grid item xs={6}>
-                    details page heare 
+                    <Box>details </Box>
                   </Grid>
             </Grid>
             </Container>
