@@ -3,10 +3,10 @@ import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Typography } f
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import categoryImg from "@/asset/images.jpg"
 
 const DynamicNewspage = async({params, searchParams}) => {
     const {data: categoryNews}= await getCategoriesNews(searchParams.category)
-    console.log(categoryNews)
     return (
         <div>
             <h1 className='my-3'>Total {searchParams.category} post: {categoryNews.length}</h1>
