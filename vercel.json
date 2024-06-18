@@ -1,13 +1,6 @@
 {
-    "rewrites": [
-  
-      {
-        "version": 2,
-        "source": "/(.*)",
-        "destination": "/",
-        "routes": [
-           { "src": "/(.*)", "dest": "/" }
-         ]
-      }
-    ]
-  }
+  "version": 2,
+  "routes": [
+    { "src": "/(.*)", "dest": "/" }
+  ]
+}
