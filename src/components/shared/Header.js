@@ -1,7 +1,7 @@
 "use client";
 import { Box, Container, Typography } from '@mui/material';
 import React from 'react';
-import header from "@/asset/The Dragon news.png"
+import header from "@/asset/The-Dragon-News.png"
 import Image from 'next/image';
 import { showCurrentDate } from '@/utils/showCurrentDate';
 
